@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 
 const Navbar = () => (
     <nav>
-        <AppBar title ="Pixabay Image Finder" />
+        <AppBar title ="Pixabay Image Finder" showMenuIconButton={false} />
     </nav>
     
 

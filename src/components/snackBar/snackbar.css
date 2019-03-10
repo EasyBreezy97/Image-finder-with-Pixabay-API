@@ -1,0 +1,36 @@
+.Snackbar{
+    width: 500px;
+    height: 80px;
+    border-radius: 25px;
+    padding: 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2e3033;
+    color: #fff;
+    z-index: 100;
+    margin-bottom: 5px;
+}
+
+.Snackbar button{
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10px;
+    background: transparent;
+    border: none;
+    font-weight:100;
+    letter-spacing: 1px;
+    color:#e00b44;
+    cursor: pointer;
+    right: 15px;
+    font-size: 1rem;
+
+
+}
+.Snackbar button:hover{
+    color: #ce2f59;
+}
+.Snackbar .hide{
+    transform: translateY(-100%);
+}
