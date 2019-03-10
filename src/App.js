@@ -3,21 +3,32 @@ import NavBar from './components/navbar/NavBar';
 import Search from './components/search/Search';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Snackbar from './components/snackBar/snackbar';
-
-import './App.css';
+import classes from './App.css';
 
 class App extends Component {
-  hide = () =>{
-    
-  }
+ state ={
+  hideSnackBar:false
+}
+
+ hideSnackBar = () => {
+   this.setState({hideSnackBar:true})
+ }
+
+
   render() {
     return (
-      <div className="App">
+      <div >
         <MuiThemeProvider>
           <React.Fragment>
             <NavBar/>
-            <Search/>   
-            <Snackbar />
+            <Search />   
+            <div  className  = {this.state.hideSnackBar ?  classes.hide : null}>
+          
+              <Snackbar 
+              btnClicked = {this.hideSnackBar}/>
+            
+            
+            </div>
           </React.Fragment>
         </MuiThemeProvider>
       </div>
